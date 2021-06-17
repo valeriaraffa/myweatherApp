@@ -1,17 +1,83 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+     L A
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <!-- <ion-title size="large">SimpleWheater</ion-title> -->
+      <app-explore-container name="Simple Wheater"></app-explore-container>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  
+  <ion-card>
+    <ion-item>
+      <!-- <ion-icon name="pin" slot="start"></ion-icon> -->
+      <ion-label>Next hours</ion-label>
+      <!-- <ion-button fill="outline" slot="end">View</ion-button> -->
+    </ion-item>
+  
+  
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>{{tempC}}</div>
+            <div>{{precipC}}</div>
+            <div><img src={{iconC}} size="small"/></div>
+            <p>{{dateC}}</p>
+          </ion-col>
+          <ion-col>
+            <div>{{temp0}}</div>
+            <div>{{precip0}}</div>
+            <div><img src={{icon0}} size="small"/></div>
+            <p>{{date0}}</p>
+          </ion-col>
+          <ion-col>
+            <div>{{temp10}}</div>
+            <div>{{precip10}}</div>
+            <div><img src={{icon10}} size="small"/></div>
+            <p>{{date10}}</p>
+          </ion-col>
+          <ion-col>
+            <div>{{temp20}}</div>
+            <div>{{precip20}}</div>
+            <div><img src={{icon20}} size="small"/></div>
+            <p>{{date20}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item>
+      <!-- <ion-icon name="pin" slot="start"></ion-icon> -->
+      <ion-label>Next 5 Days</ion-label>
+      <!-- <ion-button fill="outline" slot="end">View</ion-button> -->
+    </ion-item>
+    <ion-item  >
+      <div><img src={{icon510}} size="small"/></div>
+      <ion-label>Card Link Item 1 activated</ion-label>
+    </ion-item>
+  
+    <ion-item >
+      <div><img src={{icon520}} size="small"/></div>
+      <ion-label>Card Link Item 2</ion-label>
+    </ion-item>
+  
+    <ion-item >
+      <div><img src={{icon530}} size="small"/></div>
+      <ion-label>Card Button Item 1 activated</ion-label>
+    </ion-item>
+  
+    <ion-item>
+      <div><img src={{icon540}} size="small"/></div>
+      <ion-label>Card Button Item 2</ion-label>
+    </ion-item>
+  </ion-card>
 </ion-content>

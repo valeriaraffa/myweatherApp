@@ -12,4 +12,7 @@ export class ExploreContainerComponent implements OnInit {
 
   ngOnInit() {}
 
+  search(){
+    console.log("search");
+}
 }

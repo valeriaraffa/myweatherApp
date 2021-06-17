@@ -1,4 +1,12 @@
-<div id="container">
-  <strong>{{ name }}</strong>
-  <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<div id="container" >
+  <ion-header>
+    <ion-text size="large">{{ name }}</ion-text>
+    <ion-icon name="search" (click)="searchActive=!searchActive" item-right></ion-icon>
+    <ion-toolbar *ngIf="searchActive">
+      <ion-searchbar type="text" debounce="500" (ionChange)="getItems($event)" how-cancel-button="always" class='ion-no-padding'></ion-searchbar>
+      <ion-list *ngIf="isItemAvailable">
+        <ion-item *ngFor="let item of items">{{ item }}</ion-item>
+      </ion-list>
+    </ion-toolbar> 
+  </ion-header>
 </div>

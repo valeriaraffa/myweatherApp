@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class WheaterApiService {
+export class WeatherApiService {
   
   // API stündliche wetterdaten: 'https://api.weatherbit.io/v2.0/history/hourly?city_id=5368361&start_date=2021-06-16&end_date=2021-06-17&key=a0e178e53c6e4077834d7d4b21b6311b'
   urlfs ='https://api.weatherbit.io/v2.0/history/hourly';

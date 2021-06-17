@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { WheaterApiService } from '../wheaterAPI/wheater-api.service'
+import { WeatherApiService } from '../weatherAPI/weather-api.service';
 
 @Component({
   selector: 'app-tab3',
@@ -32,7 +32,7 @@ export class Tab3Page {
     public precip20:any;
     public icon20:String='';
 
-  constructor(private WeatherAPI: WheaterApiService) {
+  constructor(private WeatherAPI: WeatherApiService) {
     this.loadAPIweatherData();
   }
 
@@ -42,7 +42,7 @@ export class Tab3Page {
   
        // aktuelle Wettervohersage 
        let dataweatherid: Observable<any>;
-       // Go to wheater API services
+       // Go to weather API services
        dataweatherid = await this.WeatherAPI.getCurrent(5368361);
        dataweatherid.subscribe(results => {
         var obj = <any>results;
